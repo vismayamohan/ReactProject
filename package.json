@@ -1,0 +1,25 @@
+{
+  "name": "react-project",
+  "version": "1.0.0",
+  "description": "Learning react from basics",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vismayamohan/ReactProject.git"
+  },
+  "author": "Vismaya Mohan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vismayamohan/ReactProject/issues"
+  },
+  "homepage": "https://github.com/vismayamohan/ReactProject#readme",
+  "dependencies": {
+    "npm": "^9.4.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.8.3"
+  }
+}
