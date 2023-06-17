@@ -2,8 +2,9 @@
   "name": "react-project",
   "version": "1.0.0",
   "description": "Learning react from basics",
-  "main": "App.js",
   "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "repository": {
@@ -17,9 +18,14 @@
   },
   "homepage": "https://github.com/vismayamohan/ReactProject#readme",
   "dependencies": {
-    "npm": "^9.4.0"
+    "npm": "^9.4.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "parcel": "^2.8.3"
+    "@babel/core": "^7.22.1",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "parcel": "^2.8.3",
+    "process": "^0.11.10"
   }
 }
