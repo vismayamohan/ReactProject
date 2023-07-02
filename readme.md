@@ -1,38 +1,38 @@
+## Class 1
+
+#### What is emmet?
+- Emment is designed to speedup the process of writing and editing code by providing a set of shortcuts that can be quickly expandable to full code blocks. It is a set of plug-ins for text editors that allow for high-speed coding and editing in structured code format via content assist.
+
+#### What is cross-origin?
+- CORS is a mechanism which uses additional HTTP headers to tell the browser wheather a specific web app can share resource with another webapp. So both the webapp should have different origin. So if they have the same origin then it is easy to share resourses, but if not then they need to follow the CORS mechanism.
+
+
 ## Class 2
 
 #### What is NPM?
-NPM is a package manager for JS programming language and maintained by node. 
-It is world's largest software registry. 
-NPM is very easy to use we can install any software package for free.
-It is free to use and we can create private software package as well, many companies use them.
-NPM is dependend on node.js
-NPM helps in creating config file for our project which will help to run our project.
-NPM creates a package.json file which consists of all the configuration.
+- NPM is a package manager for JS programming language and maintained by node. It is world's largest software registry. NPM is very easy to use we can install any software package for free. It is free to use and we can create private software package as well, many companies use them. NPM is dependend on node.js NPM helps in creating config file for our project which will help to run our project. NPM creates a package.json file which consists of all the configuration.
 
 #### What is parcel/Webpack? Why do we need it?
-Parcel/Webpack are bundlers which helps in running the project on browser.
-Bundler is a devlopement tool that combine many javascript files into a single one that is production ready
-loadable in browser.
-There are many reasons why we need bundlers some of them are
-It is an optimizing technique we can use to reduce the number of server requests for javascript files.
+- Parcel/Webpack are bundlers which helps in running the project on browser. Bundler is a devlopement tool that combine many javascript files into a single one that is production ready loadable in browser. There are many reasons why we need bundlers some of them are.
+--> It is an optimizing technique we can use to reduce the number of server requests for javascript files.
 
 
 #### What is .parcel-cache
-parcel-cache folder stores information about our project when parcel builds it, so that when it rebuilds, it does not have to re-parse and re-analyze everything from scratch. This is one of the reason why parcel can be very fast in development mode. We should add this in git-ignore becasuse it is the space taken by parcel during production building its binary files. This can be made again after deleting cache with a command npm run build. This is where parcel helps our project and do all the extra work for our application.
+- Parcel-cache folder stores information about our project when parcel builds it, so that when it rebuilds, it does not have to re-parse and re-analyze everything from scratch. This is one of the reason why parcel can be very fast in development mode. We should add this in git-ignore becasuse it is the space taken by parcel during production building its binary files. This can be made again after deleting cache with a command npm run build. This is where parcel helps our project and do all the extra work for our application.
 
 #### What is npx?
-NPX is node package execute. NPX is used to execute JS packages. NPX means execute using NPM.
+- NPX is node package execute. NPX is used to execute JS packages. NPX means execute using NPM.
 
 #### What is the differnece between dependencies and devDependencies?
-In every application there is a file called as package.json. This file containes all the relavent data regarding the project. 
-Dependencies: It consists of all the packages that are used in the project with the version number. 
-devDependencies: It consists of all the packages that are used in the project development phase and not in the production or testing environment.
-
+- In every application there is a file called as package.json. This file containes all the relavent data regarding the project. 
+--> Dependencies: It consists of all the packages that are used in the project with the version number. 
+--> devDependencies: It consists of all the packages that are used in the project development phase and not in the production or testing environment.
+--> Global Dependencies: In global dependencies it installs the current package context as global package. It allows us to use the code in the package as a set of tools on our local computer.
 #### What is tree shaking?
-Tree shaking is when there are dead code present in our application it will help us removing the same. Parcel helps in automatically remove dead code when bundling multiple files into single file. This is important for preparing code that is production ready with clean structures and minimal file size.
+- Tree shaking is when there are dead code present in our application it will help us removing the same. Parcel helps in automatically remove dead code when bundling multiple files into single file. This is important for preparing code that is production ready with clean structures and minimal file size.
 
 #### What is hot module replacement.
-Hot module replacement exchanges, adds or removes modules while an application is running, without a full reload. This can significantly speed up development by retaining application state which is lost during full reload. Save development time by only updating what's changed. Instantly update the browser when modifications are made to CSS/JS and many more.
+- Hot module replacement exchanges, adds or removes modules while an application is running, without a full reload. This can significantly speed up development by retaining application state which is lost during full reload. Save development time by only updating what's changed. Instantly update the browser when modifications are made to CSS/JS and many more.
 
 
 #### List down your favourite 5 superpowers of Parcel and describe any 3 of them in your own words.
