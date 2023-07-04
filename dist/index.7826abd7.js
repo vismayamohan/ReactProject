@@ -2930,98 +2930,192 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _client = require("react-dom/client");
 var _clientDefault = parcelHelpers.interopDefault(_client);
+var _logoPng = require("/images/logo.png");
+var _logoPngDefault = parcelHelpers.interopDefault(_logoPng);
 // const heading = React.createElement(
 //   "h1",
 //   {
-//     id:'hello',
-//     style:{
-//       background: 'purple',
-//       color:'white'
+//     id: "hello",
+//     style: {
+//       background: "purple",
+//       color: "white",
 //     },
-//     key: "h1"
+//     key: "h1",
 //   },
 //   "Hello React for parcel"
 // );
-const heading2 = /*#__PURE__*/ (0, _reactDefault.default).createElement("h2", {
-    id: "hello2",
-    key: "h2"
-}, "Hello World from React");
-console.log(heading2);
-const container = /*#__PURE__*/ (0, _reactDefault.default).createElement("div", {
-    id: "container",
-    hello: "world"
-});
-// JSX
-const headerTag = /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-    id: "header",
-    className: "headerone",
-    children: "Hello World Vis"
-}, "h1", false, {
-    fileName: "App.js",
-    lineNumber: 61,
-    columnNumber: 19
-}, undefined);
-const Title = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-        id: "title",
-        children: "Hello Im Title"
-    }, "title", false, {
-        fileName: "App.js",
-        lineNumber: 64,
-        columnNumber: 21
-    }, undefined);
-_c = Title;
-var xyz = 10;
-// React Component
-// Functional Component
-// Name of the component starts with capital letter - not mandatory, it is a good practise
-const HeaderComponent = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+// const heading2 = React.createElement(
+//   "h2",
+//   {
+//     id: "hello2",
+//     key: "h2",
+//   },
+//   "Hello World from React"
+// );
+// console.log(heading2);
+// const container = React.createElement(
+//   "div",
+//   {
+//     id: "container",
+//     hello: "world",
+//   }[
+//     (React.createElement(
+//       "h1",
+//       {
+//         id: "hello",
+//         style: {
+//           background: "purple",
+//           color: "white",
+//         },
+//         key: "h1",
+//       },
+//       "Namste React"
+//     ),
+//     React.createElement(
+//       "ul",
+//       {},
+//       [React.createElement("li", {}, "About Us")],
+//       [React.createElement("li", {}, "Home")],
+//       [React.createElement("li", {}, "Contact Us")]
+//     ))
+//   ]
+// );
+// // JSX
+// const headerTag = (
+//   <h1 id="header" key="h1" className="headerone">
+//     Hello World Vis
+//   </h1>
+// );
+// const Title = () => (
+//   <h1 id="title" key="title">
+//     Hello Im Title
+//   </h1>
+// );
+// var xyz = 10;
+// // React Component
+// // Functional Component
+// // Name of the component starts with capital letter - not mandatory, it is a good practise
+// const HeaderComponent = () => (
+//   <div>
+//     {xyz}
+//     <Title /> -- component composition
+//     {headerTag} -- this code is coming from react element
+//     <h1>Hello world namaste react</h1>
+//     <h2>Namaste react functional component</h2>
+//   </div>
+// );
+// const headingData = React.createElement(
+//   "div",
+//   {
+//     className: "title",
+//     key: "title",
+//   },
+//   [React.createElement("h1", { key: "h1" }, "Hello I'm header tag 1")],
+//   [React.createElement("h2", { key: "h2" }, "Hello I'm header tag 2")],
+//   [React.createElement("h3", { key: "h3" }, "Hello I'm header tag 3")]
+// );
+// const headingDataJSX = (
+//   <div className="title" key="title">
+//     <h1 key="h1">Hello I'm header tag 1 JSX</h1>
+//     <h2 key="h2">Hello I'm header tag 2 JSX</h2>
+//     <h3 key="h3">Hello I'm header tag 3 JSX</h3>
+//   </div>
+// );
+// const HeadingDataFunction = () => {
+//   return (
+//     <div className="title" key="title">
+//       <h1 key="h1">Hello I'm header tag 1 function</h1>
+//       <h2 key="h2">Hello I'm header tag 2 function</h2>
+//       <h3 key="h3">Hello I'm header tag 3 function</h3>
+//       <CompositionComponent />
+//       {titleComponent}
+//       <TitleComponent />
+//       <TitleComponent></TitleComponent>
+//     </div>
+//   );
+// };
+// const CompositionComponent = () => {
+//   return <h5>Just calling this for composition component purpose.</h5>;
+// };
+// const titleComponent = (
+//   <h2>
+//     TitleComponent variable, where we can call this directly inside any
+//     component directly using curly braces.
+//   </h2>
+// );
+// const TitleComponent = () => (
+//   <h4>This is just a title functional component which can be called inside another functional component or component</h4>
+//)
+const HeaderComponent = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("header", {
+        className: "header",
         children: [
-            xyz,
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Title, {}, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 71,
-                columnNumber: 5
-            }, undefined),
-            " -- component composition",
-            headerTag,
-            " -- this code is coming from react element",
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                children: "Hello world namaste react"
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "logoWrapper",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                    src: (0, _logoPngDefault.default),
+                    alt: "Logo"
+                }, void 0, false, {
+                    fileName: "App.js",
+                    lineNumber: 133,
+                    columnNumber: 7
+                }, undefined)
             }, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 73,
+                lineNumber: 132,
                 columnNumber: 5
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                children: "Namaste react functional component"
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "searchWrapper",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                    type: "search",
+                    placeholder: "Search..."
+                }, void 0, false, {
+                    fileName: "App.js",
+                    lineNumber: 136,
+                    columnNumber: 7
+                }, undefined)
             }, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 74,
+                lineNumber: 135,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                class: "userWrapper",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                    className: "userIcon",
+                    children: "user"
+                }, void 0, false, {
+                    fileName: "App.js",
+                    lineNumber: 139,
+                    columnNumber: 7
+                }, undefined)
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 138,
                 columnNumber: 5
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "App.js",
-        lineNumber: 69,
+        lineNumber: 131,
         columnNumber: 31
     }, undefined);
-_c1 = HeaderComponent;
+_c = HeaderComponent;
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(HeaderComponent, {}, void 0, false, {
     fileName: "App.js",
-    lineNumber: 77,
+    lineNumber: 143,
     columnNumber: 13
 }, undefined));
-var _c, _c1;
-$RefreshReg$(_c, "Title");
-$RefreshReg$(_c1, "HeaderComponent");
+var _c;
+$RefreshReg$(_c, "HeaderComponent");
 
   $parcel$ReactRefreshHelpers$c1db.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","/images/logo.png":"4dMX9"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("334f169ca1b7864a");
 
@@ -27369,6 +27463,43 @@ function registerExportsForReactRefresh(module1) {
     }
 }
 
-},{"5ff06325de4f9dd5":"786KC"}]},["1xC6H","lyZ4E","2Ew96"], "2Ew96", "parcelRequiredd69")
+},{"5ff06325de4f9dd5":"786KC"}],"4dMX9":[function(require,module,exports) {
+module.exports = require("a348bfdc52cd292c").getBundleURL("lly8x") + "logo.d4f8fe33.png" + "?" + Date.now();
+
+},{"a348bfdc52cd292c":"lgJ39"}],"lgJ39":[function(require,module,exports) {
+"use strict";
+var bundleURL = {};
+function getBundleURLCached(id) {
+    var value = bundleURL[id];
+    if (!value) {
+        value = getBundleURL();
+        bundleURL[id] = value;
+    }
+    return value;
+}
+function getBundleURL() {
+    try {
+        throw new Error();
+    } catch (err) {
+        var matches = ("" + err.stack).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^)\n]+/g);
+        if (matches) // The first two stack frames will be this function and getBundleURLCached.
+        // Use the 3rd one, which will be a runtime in the original bundle.
+        return getBaseURL(matches[2]);
+    }
+    return "/";
+}
+function getBaseURL(url) {
+    return ("" + url).replace(/^((?:https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/.+)\/[^/]+$/, "$1") + "/";
+} // TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
+function getOrigin(url) {
+    var matches = ("" + url).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^/]+/);
+    if (!matches) throw new Error("Origin not found");
+    return matches[0];
+}
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+exports.getOrigin = getOrigin;
+
+},{}]},["1xC6H","lyZ4E","2Ew96"], "2Ew96", "parcelRequiredd69")
 
 //# sourceMappingURL=index.7826abd7.js.map

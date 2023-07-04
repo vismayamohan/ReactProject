@@ -70,3 +70,20 @@
 
 #### What is ˆ - carat and ~ - tilda ?
 - Using a caret (^) sign means that we can accept minor releases and patch releases, but not a major release when updating our package. Using a tilde sign before our version number means that we can accept only a patch release when updating our package. 
+
+
+## Class 3
+
+### What is JSX?
+- JSX is nothing but javascript XML (extensible markup language). It is not HTML inside javascript, but it is HTML like syntax. JSX allows us to describe React's object tree using a syntax that resembles that of an HTML template. 
+
+### Superpowers of JSX
+- We can write javascript inside JSX, it is easy to maintain, we can debug easily. We can write logic and HTML in a single file.
+
+### Role of type attribute in script tag? What options can I use there?
+- Type attribute specifies the type of the script. The default value is text/javascript.
+
+### {TitleComponent} vs {<TitleComponent />} vs {<TitleComponent></TitleComponent>} in JSX
+- {TitleComponent}: TitleComponent is javascript variable or a JS expression. Curly braces is used to call a variable inside JSX.
+- <TitleComponent />: This is a react component which is returning some JSX value inside another component or render this component. This is a function component that returns a JSX value. A value which is inside angular bracket with closing tag is component.
+- <TitleComponent></TitleComponent>: This is equal to <TitleComponent />. We write in this way when there are no component composition. But when another component is called inside current component we write in this way.
