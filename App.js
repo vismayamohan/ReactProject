@@ -1,145 +1,1622 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import logo from "/images/logo.png"
+import logo from "/images/logo.png";
 
-// const heading = React.createElement(
-//   "h1",
-//   {
-//     id: "hello",
-//     style: {
-//       background: "purple",
-//       color: "white",
-//     },
-//     key: "h1",
-//   },
-//   "Hello React for parcel"
-// );
+const Title = () => {
+  return (
+    <a href="/">
+      <img
+        className="logo"
+        alt="logo"
+        src="https://i.pinimg.com/736x/fe/50/40/fe5040ef6eb50e18c24f937bc43916a0.jpg"
+      />
+    </a>
+  );
+};
 
-// const heading2 = React.createElement(
-//   "h2",
-//   {
-//     id: "hello2",
-//     key: "h2",
-//   },
-//   "Hello World from React"
-// );
-// console.log(heading2);
-// const container = React.createElement(
-//   "div",
-//   {
-//     id: "container",
-//     hello: "world",
-//   }[
-//     (React.createElement(
-//       "h1",
-//       {
-//         id: "hello",
-//         style: {
-//           background: "purple",
-//           color: "white",
-//         },
-//         key: "h1",
-//       },
-//       "Namste React"
-//     ),
-//     React.createElement(
-//       "ul",
-//       {},
-//       [React.createElement("li", {}, "About Us")],
-//       [React.createElement("li", {}, "Home")],
-//       [React.createElement("li", {}, "Contact Us")]
-//     ))
-//   ]
-// );
-
-// // JSX
-
-// const headerTag = (
-//   <h1 id="header" key="h1" className="headerone">
-//     Hello World Vis
-//   </h1>
-// );
-
-// const Title = () => (
-//   <h1 id="title" key="title">
-//     Hello Im Title
-//   </h1>
-// );
-
-// var xyz = 10;
-// // React Component
-// // Functional Component
-// // Name of the component starts with capital letter - not mandatory, it is a good practise
-// const HeaderComponent = () => (
-//   <div>
-//     {xyz}
-//     <Title /> -- component composition
-//     {headerTag} -- this code is coming from react element
-//     <h1>Hello world namaste react</h1>
-//     <h2>Namaste react functional component</h2>
-//   </div>
-// );
-
-// const headingData = React.createElement(
-//   "div",
-//   {
-//     className: "title",
-//     key: "title",
-//   },
-//   [React.createElement("h1", { key: "h1" }, "Hello I'm header tag 1")],
-//   [React.createElement("h2", { key: "h2" }, "Hello I'm header tag 2")],
-//   [React.createElement("h3", { key: "h3" }, "Hello I'm header tag 3")]
-// );
-
-// const headingDataJSX = (
-//   <div className="title" key="title">
-//     <h1 key="h1">Hello I'm header tag 1 JSX</h1>
-//     <h2 key="h2">Hello I'm header tag 2 JSX</h2>
-//     <h3 key="h3">Hello I'm header tag 3 JSX</h3>
-//   </div>
-// );
-
-// const HeadingDataFunction = () => {
-//   return (
-//     <div className="title" key="title">
-//       <h1 key="h1">Hello I'm header tag 1 function</h1>
-//       <h2 key="h2">Hello I'm header tag 2 function</h2>
-//       <h3 key="h3">Hello I'm header tag 3 function</h3>
-//       <CompositionComponent />
-//       {titleComponent}
-//       <TitleComponent />
-//       <TitleComponent></TitleComponent>
-//     </div>
-//   );
-// };
-
-// const CompositionComponent = () => {
-//   return <h5>Just calling this for composition component purpose.</h5>;
-// };
-
-// const titleComponent = (
-//   <h2>
-//     TitleComponent variable, where we can call this directly inside any
-//     component directly using curly braces.
-//   </h2>
-// );
-
-// const TitleComponent = () => (
-//   <h4>This is just a title functional component which can be called inside another functional component or component</h4>
-//)
-
-const HeaderComponent = () => (
-  <header className="header">
-    <div className="logoWrapper">
-      <img src={logo} alt="Logo"/>
+const Header = () => {
+  return (
+    <div className="header" style={styleObj}>
+      <Title />
+      <div
+        className="nav-items"
+        style={{
+          fontSize: "15px",
+        }}
+      >
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact</li>
+          <li>Cart</li>
+        </ul>
+      </div>
     </div>
-    <div className="searchWrapper">
-      <input type="search" placeholder="Search..."/>
+  );
+};
+
+const styleObj = {
+  // border: "10px solid black",
+};
+
+// config driven UI
+
+const resturantList = [
+  {
+    type: "restaurant",
+    data: {
+      type: "F",
+      id: "717827",
+      name: "Waffle Up",
+      uuid: "e94eec87-204d-42c2-9ee2-63b2188d87e0",
+      city: "5",
+      area: "Powai",
+      totalRatingsString: "20+ ratings",
+      cloudinaryImageId: "bf64b533bcaf3ff58b37d0a5f2853bf3",
+      cuisines: ["Waffle", "Desserts"],
+      tags: [],
+      costForTwo: 50000,
+      costForTwoString: "₹500 FOR TWO",
+      deliveryTime: 39,
+      minDeliveryTime: 39,
+      maxDeliveryTime: 39,
+      slaString: "39 MINS",
+      lastMileTravel: 5.699999809265137,
+      slugs: {
+        restaurant: "waffle-up-powai-powai",
+        city: "mumbai",
+      },
+      cityState: "5",
+      address:
+        "SHOP NO 10, BLDG NO 12-C, CHANDIVALI ABHILASHA CHS LTD, C.T.S. NO.41, MHADA COLONY, CHANDIVALI, Chandivali Gaon (E), Greater Mumbai Ward-L, Greater Mumbai, Maharashtra  400004",
+      locality: "Mhada Colony",
+      parentId: 435471,
+      unserviceable: false,
+      veg: false,
+      select: false,
+      favorite: false,
+      tradeCampaignHeaders: [],
+      ribbon: [
+        {
+          type: "PROMOTED",
+        },
+      ],
+      chain: [],
+      feeDetails: {
+        fees: [
+          {
+            name: "distance",
+            fee: 6100,
+            message: "",
+          },
+          {
+            name: "time",
+            fee: 0,
+            message: "",
+          },
+          {
+            name: "special",
+            fee: 0,
+            message: "",
+          },
+        ],
+        totalFees: 6100,
+        message: "",
+        title: "Delivery Charge",
+        amount: "6100",
+        icon: "",
+      },
+      availability: {
+        opened: true,
+        nextOpenMessage: "",
+        nextCloseMessage: "",
+      },
+      longDistanceEnabled: 0,
+      rainMode: "NONE",
+      thirdPartyAddress: false,
+      thirdPartyVendor: "",
+      adTrackingID:
+        "cid=7469273~p=1~eid=00000189-4b15-08f5-01c1-64c700e10140~srvts=1689181817077",
+      badges: {
+        imageBased: [],
+        textBased: [],
+        textExtendedBadges: [],
+      },
+      lastMileTravelString: "5.6 kms",
+      hasSurge: false,
+      sla: {
+        restaurantId: "717827",
+        deliveryTime: 39,
+        minDeliveryTime: 39,
+        maxDeliveryTime: 39,
+        lastMileTravel: 5.699999809265137,
+        lastMileDistance: 0,
+        serviceability: "SERVICEABLE",
+        rainMode: "NONE",
+        longDistance: "NOT_LONG_DISTANCE",
+        preferentialService: false,
+        iconType: "EMPTY",
+      },
+      promoted: true,
+      avgRating: "5.0",
+      totalRatings: 20,
+      new: true,
+    },
+    subtype: "basic",
+  },
+  {
+    type: "restaurant",
+    data: {
+      type: "F",
+      id: "355806",
+      name: "Baba Falooda (Kurla)",
+      uuid: "384970ad-6ed8-455a-acf6-5493551f5893",
+      city: "5",
+      area: "Kurla",
+      totalRatingsString: "5000+ ratings",
+      cloudinaryImageId: "ys88tnnklqgfhzsftmqq",
+      cuisines: ["Ice Cream", "Beverages", "Desserts"],
+      tags: [],
+      costForTwo: 20000,
+      costForTwoString: "₹200 FOR TWO",
+      deliveryTime: 24,
+      minDeliveryTime: 24,
+      maxDeliveryTime: 24,
+      slaString: "24 MINS",
+      lastMileTravel: 1,
+      slugs: {
+        restaurant: "baba-falooda-by-hotel-sky-way-powai-powai",
+        city: "mumbai",
+      },
+      cityState: "5",
+      address:
+        "TAYYAB MANZIL  shop no 1,2,3 L.B.S Marg KURLA WEST MUMBAI 400070",
+      locality: "Powai",
+      parentId: 38827,
+      unserviceable: false,
+      veg: false,
+      select: false,
+      favorite: false,
+      tradeCampaignHeaders: [],
+      chain: [],
+      feeDetails: {
+        fees: [
+          {
+            name: "distance",
+            fee: 3600,
+            message: "",
+          },
+          {
+            name: "time",
+            fee: 0,
+            message: "",
+          },
+          {
+            name: "special",
+            fee: 0,
+            message: "",
+          },
+        ],
+        totalFees: 3600,
+        message: "",
+        title: "Delivery Charge",
+        amount: "3600",
+        icon: "",
+      },
+      availability: {
+        opened: true,
+        nextOpenMessage: "",
+        nextCloseMessage: "",
+      },
+      longDistanceEnabled: 0,
+      rainMode: "NONE",
+      thirdPartyAddress: false,
+      thirdPartyVendor: "",
+      adTrackingID: "",
+      badges: {
+        imageBased: [],
+        textBased: [],
+        textExtendedBadges: [],
+      },
+      lastMileTravelString: "1 kms",
+      hasSurge: false,
+      sla: {
+        restaurantId: "355806",
+        deliveryTime: 24,
+        minDeliveryTime: 24,
+        maxDeliveryTime: 24,
+        lastMileTravel: 1,
+        lastMileDistance: 0,
+        serviceability: "SERVICEABLE",
+        rainMode: "NONE",
+        longDistance: "NOT_LONG_DISTANCE",
+        preferentialService: false,
+        iconType: "EMPTY",
+      },
+      promoted: false,
+      avgRating: "4.4",
+      totalRatings: 5000,
+      new: false,
+    },
+    subtype: "basic",
+  },
+  {
+    type: "restaurant",
+    data: {
+      type: "F",
+      id: "78036",
+      name: "Burger King",
+      uuid: "c04163ad-ab93-4fce-81da-e87d4f2687b0",
+      city: "5",
+      area: "Santacruz East",
+      totalRatingsString: "10000+ ratings",
+      cloudinaryImageId: "e33e1d3ba7d6b2bb0d45e1001b731fcf",
+      cuisines: ["Burgers", "American"],
+      tags: [],
+      costForTwo: 35000,
+      costForTwoString: "₹350 FOR TWO",
+      deliveryTime: 26,
+      minDeliveryTime: 26,
+      maxDeliveryTime: 26,
+      slaString: "26 MINS",
+      lastMileTravel: 1.5,
+      slugs: {
+        restaurant: "burger-king-cst-road-scruz-bandra-east",
+        city: "mumbai",
+      },
+      cityState: "5",
+      address:
+        "unit no G2, Ground floor , Central Plaza , 166,CST Road, Kalina, Mumbai 400098",
+      locality: "Central Plaza, Kalina",
+      parentId: 166,
+      unserviceable: false,
+      veg: false,
+      select: false,
+      favorite: false,
+      tradeCampaignHeaders: [],
+      chain: [],
+      feeDetails: {
+        fees: [
+          {
+            name: "distance",
+            fee: 3600,
+            message: "",
+          },
+          {
+            name: "time",
+            fee: 0,
+            message: "",
+          },
+          {
+            name: "special",
+            fee: 0,
+            message: "",
+          },
+        ],
+        totalFees: 3600,
+        message: "",
+        title: "Delivery Charge",
+        amount: "3600",
+        icon: "",
+      },
+      availability: {
+        opened: true,
+        nextOpenMessage: "",
+        nextCloseMessage: "",
+      },
+      longDistanceEnabled: 0,
+      rainMode: "NONE",
+      thirdPartyAddress: false,
+      thirdPartyVendor: "",
+      adTrackingID: "",
+      badges: {
+        imageBased: [],
+        textBased: [],
+        textExtendedBadges: [],
+      },
+      lastMileTravelString: "1.5 kms",
+      hasSurge: false,
+      aggregatedDiscountInfoV3: {
+        header: "60% OFF",
+        subHeader: "UPTO ₹120",
+        discountTag: "",
+        headerTypeV2: 0,
+      },
+      sla: {
+        restaurantId: "78036",
+        deliveryTime: 26,
+        minDeliveryTime: 26,
+        maxDeliveryTime: 26,
+        lastMileTravel: 1.5,
+        lastMileDistance: 0,
+        serviceability: "SERVICEABLE",
+        rainMode: "NONE",
+        longDistance: "NOT_LONG_DISTANCE",
+        preferentialService: false,
+        iconType: "EMPTY",
+      },
+      promoted: false,
+      avgRating: "4.2",
+      totalRatings: 10000,
+      new: false,
+    },
+    subtype: "basic",
+  },
+  {
+    type: "restaurant",
+    data: {
+      type: "F",
+      id: "627565",
+      name: "Sweet County Cake Shop",
+      uuid: "e961a1dc-bf65-4120-9c79-299a119b3326",
+      city: "5",
+      area: "Ghatkopar East",
+      totalRatingsString: "50+ ratings",
+      cloudinaryImageId: "d99d140b0983e6f10f85e9a58fd1057e",
+      cuisines: ["Desserts", "Bakery", "Snacks"],
+      tags: [],
+      costForTwo: 20000,
+      costForTwoString: "₹200 FOR TWO",
+      deliveryTime: 25,
+      minDeliveryTime: 25,
+      maxDeliveryTime: 25,
+      slaString: "25 MINS",
+      lastMileTravel: 4.800000190734863,
+      slugs: {
+        restaurant: "sweet-county-ghatkopar-vikhroli-ghatkopar-vikhroli",
+        city: "mumbai",
+      },
+      cityState: "5",
+      address:
+        "2/A, Prakash Building, RB Mehta Marg, MHADA Colony, Pant Nagar, Ghatkopar East, Mumbai, Maharashtra 400077, India",
+      locality: "Pant Nagar",
+      parentId: 338279,
+      unserviceable: false,
+      veg: false,
+      select: false,
+      favorite: false,
+      tradeCampaignHeaders: [],
+      ribbon: [
+        {
+          type: "PROMOTED",
+        },
+      ],
+      chain: [],
+      feeDetails: {
+        fees: [
+          {
+            name: "distance",
+            fee: 4600,
+            message: "",
+          },
+          {
+            name: "time",
+            fee: 0,
+            message: "",
+          },
+          {
+            name: "special",
+            fee: 0,
+            message: "",
+          },
+        ],
+        totalFees: 4600,
+        message: "",
+        title: "Delivery Charge",
+        amount: "4600",
+        icon: "",
+      },
+      availability: {
+        opened: true,
+        nextOpenMessage: "",
+        nextCloseMessage: "",
+      },
+      longDistanceEnabled: 0,
+      rainMode: "NONE",
+      thirdPartyAddress: false,
+      thirdPartyVendor: "",
+      adTrackingID:
+        "cid=7375177~p=4~eid=00000189-4b15-08f5-01c1-64c800e10436~srvts=1689181817077",
+      badges: {
+        imageBased: [],
+        textBased: [],
+        textExtendedBadges: [],
+      },
+      lastMileTravelString: "4.8 kms",
+      hasSurge: false,
+      aggregatedDiscountInfoV3: {
+        header: "50% OFF",
+        subHeader: "UPTO ₹100",
+        discountTag: "",
+        headerTypeV2: 0,
+      },
+      sla: {
+        restaurantId: "627565",
+        deliveryTime: 25,
+        minDeliveryTime: 25,
+        maxDeliveryTime: 25,
+        lastMileTravel: 4.800000190734863,
+        lastMileDistance: 0,
+        serviceability: "SERVICEABLE",
+        rainMode: "NONE",
+        longDistance: "NOT_LONG_DISTANCE",
+        preferentialService: false,
+        iconType: "EMPTY",
+      },
+      promoted: true,
+      avgRating: "4.4",
+      totalRatings: 50,
+      new: false,
+    },
+    subtype: "basic",
+  },
+  {
+    type: "restaurant",
+    data: {
+      type: "F",
+      id: "106763",
+      name: "Rangoon Zaika",
+      uuid: "cd078e24-0fae-46d9-9e45-ccedc30a0834",
+      city: "5",
+      area: "Kurla West",
+      totalRatingsString: "5000+ ratings",
+      cloudinaryImageId: "o5bbufmcjoqdfvtm7r1n",
+      cuisines: ["Indian", "Chinese"],
+      tags: [],
+      costForTwo: 40000,
+      costForTwoString: "₹400 FOR TWO",
+      deliveryTime: 25,
+      minDeliveryTime: 25,
+      maxDeliveryTime: 25,
+      slaString: "25 MINS",
+      lastMileTravel: 0.6000000238418579,
+      slugs: {
+        restaurant: "rangoon-zaika-kurla-kurla",
+        city: "mumbai",
+      },
+      cityState: "5",
+      address:
+        "Shop 4B-4C, Opposite Kalpana Cinema, Beside Ansari Weight Bridge, LBS Marg, Kurla, Mumbai",
+      locality: "Kurla",
+      parentId: 166932,
+      unserviceable: false,
+      veg: false,
+      select: false,
+      favorite: false,
+      tradeCampaignHeaders: [],
+      chain: [],
+      feeDetails: {
+        fees: [
+          {
+            name: "distance",
+            fee: 3600,
+            message: "",
+          },
+          {
+            name: "time",
+            fee: 0,
+            message: "",
+          },
+          {
+            name: "special",
+            fee: 0,
+            message: "",
+          },
+        ],
+        totalFees: 3600,
+        message: "",
+        title: "Delivery Charge",
+        amount: "3600",
+        icon: "",
+      },
+      availability: {
+        opened: true,
+        nextOpenMessage: "",
+        nextCloseMessage: "",
+      },
+      longDistanceEnabled: 0,
+      rainMode: "NONE",
+      thirdPartyAddress: false,
+      thirdPartyVendor: "",
+      adTrackingID: "",
+      badges: {
+        imageBased: [],
+        textBased: [],
+        textExtendedBadges: [],
+      },
+      lastMileTravelString: "0.6 kms",
+      hasSurge: false,
+      aggregatedDiscountInfoV3: {
+        header: "20% OFF",
+        subHeader: "UPTO ₹50",
+        discountTag: "",
+        headerTypeV2: 0,
+      },
+      sla: {
+        restaurantId: "106763",
+        deliveryTime: 25,
+        minDeliveryTime: 25,
+        maxDeliveryTime: 25,
+        lastMileTravel: 0.6000000238418579,
+        lastMileDistance: 0,
+        serviceability: "SERVICEABLE",
+        rainMode: "NONE",
+        longDistance: "NOT_LONG_DISTANCE",
+        preferentialService: false,
+        iconType: "EMPTY",
+      },
+      promoted: false,
+      avgRating: "3.7",
+      totalRatings: 5000,
+      new: false,
+    },
+    subtype: "basic",
+  },
+  {
+    type: "restaurant",
+    data: {
+      type: "F",
+      id: "9862",
+      name: "Pizza Hut",
+      uuid: "a6ccf04a-6b8c-4c2a-81cf-7e767897ba15",
+      city: "5",
+      area: "Bandra Kurla Complex",
+      totalRatingsString: "10000+ ratings",
+      cloudinaryImageId: "2b4f62d606d1b2bfba9ba9e5386fabb7",
+      cuisines: ["Pizzas"],
+      tags: [],
+      costForTwo: 30000,
+      costForTwoString: "₹300 FOR TWO",
+      deliveryTime: 30,
+      minDeliveryTime: 30,
+      maxDeliveryTime: 30,
+      slaString: "30 MINS",
+      lastMileTravel: 1.5,
+      slugs: {
+        restaurant: "pizza-hut-bkc-scruz-bandra-east",
+        city: "mumbai",
+      },
+      cityState: "5",
+      address: "BPCL petrol Pump,Opp citi group,Bandra Kurla complex",
+      locality: "Bandra Kurla Complex",
+      parentId: 721,
+      unserviceable: false,
+      veg: false,
+      select: false,
+      favorite: false,
+      tradeCampaignHeaders: [],
+      chain: [],
+      feeDetails: {
+        fees: [
+          {
+            name: "distance",
+            fee: 3600,
+            message: "",
+          },
+          {
+            name: "time",
+            fee: 0,
+            message: "",
+          },
+          {
+            name: "special",
+            fee: 0,
+            message: "",
+          },
+        ],
+        totalFees: 3600,
+        message: "",
+        title: "Delivery Charge",
+        amount: "3600",
+        icon: "",
+      },
+      availability: {
+        opened: true,
+        nextOpenMessage: "",
+        nextCloseMessage: "",
+      },
+      longDistanceEnabled: 0,
+      rainMode: "NONE",
+      thirdPartyAddress: false,
+      thirdPartyVendor: "",
+      adTrackingID: "",
+      badges: {
+        imageBased: [],
+        textBased: [],
+        textExtendedBadges: [],
+      },
+      lastMileTravelString: "1.5 kms",
+      hasSurge: false,
+      aggregatedDiscountInfoV3: {
+        header: "50% OFF",
+        subHeader: "UPTO ₹100",
+        discountTag: "",
+        headerTypeV2: 0,
+      },
+      sla: {
+        restaurantId: "9862",
+        deliveryTime: 30,
+        minDeliveryTime: 30,
+        maxDeliveryTime: 30,
+        lastMileTravel: 1.5,
+        lastMileDistance: 0,
+        serviceability: "SERVICEABLE",
+        rainMode: "NONE",
+        longDistance: "NOT_LONG_DISTANCE",
+        preferentialService: false,
+        iconType: "EMPTY",
+      },
+      promoted: false,
+      avgRating: "3.8",
+      totalRatings: 10000,
+      new: false,
+    },
+    subtype: "basic",
+  },
+  {
+    type: "restaurant",
+    data: {
+      type: "F",
+      id: "698272",
+      name: "Maiz Mexican Kitchen",
+      uuid: "af97c998-0199-48ab-8d24-2122cd4c2e36",
+      city: "5",
+      area: "BKC",
+      totalRatingsString: "100+ ratings",
+      cloudinaryImageId: "8fb434032fdce4f38d98fef761589c25",
+      cuisines: ["Mexican", "Italian", "American"],
+      tags: [],
+      costForTwo: 60000,
+      costForTwoString: "₹600 FOR TWO",
+      deliveryTime: 27,
+      minDeliveryTime: 27,
+      maxDeliveryTime: 27,
+      slaString: "27 MINS",
+      lastMileTravel: 1.7999999523162842,
+      slugs: {
+        restaurant: "maiz-mexican-kitchen-bandra-west-bandra-west",
+        city: "mumbai",
+      },
+      cityState: "5",
+      address:
+        "OFFICE NO. 10, SWASTIK INDUSTRIAL ESTATE, VIDYANAGARI MARG, KALINA CST ROAD, SANTACRUZ EAST MUMBAI , Greater Mumbai Ward-H/E, Greater Mumbai, Maharashtra-400098",
+      locality: "Kalina Cst Road",
+      parentId: 11654,
+      unserviceable: false,
+      veg: false,
+      select: false,
+      favorite: false,
+      tradeCampaignHeaders: [],
+      ribbon: [
+        {
+          type: "PROMOTED",
+        },
+      ],
+      chain: [],
+      feeDetails: {
+        fees: [
+          {
+            name: "distance",
+            fee: 3600,
+            message: "",
+          },
+          {
+            name: "time",
+            fee: 0,
+            message: "",
+          },
+          {
+            name: "special",
+            fee: 0,
+            message: "",
+          },
+        ],
+        totalFees: 3600,
+        message: "",
+        title: "Delivery Charge",
+        amount: "3600",
+        icon: "",
+      },
+      availability: {
+        opened: true,
+        nextOpenMessage: "",
+        nextCloseMessage: "",
+      },
+      longDistanceEnabled: 0,
+      rainMode: "NONE",
+      thirdPartyAddress: false,
+      thirdPartyVendor: "",
+      adTrackingID:
+        "cid=7352418~p=7~eid=00000189-4b15-08f5-01c1-64c900e10709~srvts=1689181817077",
+      badges: {
+        imageBased: [],
+        textBased: [],
+        textExtendedBadges: [],
+      },
+      lastMileTravelString: "1.7 kms",
+      hasSurge: false,
+      aggregatedDiscountInfoV3: {
+        header: "40% OFF",
+        subHeader: "UPTO ₹80",
+        discountTag: "",
+        headerTypeV2: 0,
+      },
+      sla: {
+        restaurantId: "698272",
+        deliveryTime: 27,
+        minDeliveryTime: 27,
+        maxDeliveryTime: 27,
+        lastMileTravel: 1.7999999523162842,
+        lastMileDistance: 0,
+        serviceability: "SERVICEABLE",
+        rainMode: "NONE",
+        longDistance: "NOT_LONG_DISTANCE",
+        preferentialService: false,
+        iconType: "EMPTY",
+      },
+      promoted: true,
+      avgRating: "4.3",
+      totalRatings: 100,
+      new: false,
+    },
+    subtype: "basic",
+  },
+  {
+    type: "restaurant",
+    data: {
+      type: "F",
+      id: "19344",
+      name: "Deluxe Restaurant",
+      uuid: "02a7e2f5-b247-4dc4-9111-c05d925f74b1",
+      city: "5",
+      area: "Kurla",
+      totalRatingsString: "10000+ ratings",
+      cloudinaryImageId: "c81a3911bd1e10c8ee8f92b4796ba829",
+      cuisines: ["Mughlai", "Chinese"],
+      tags: [],
+      costForTwo: 40000,
+      costForTwoString: "₹400 FOR TWO",
+      deliveryTime: 29,
+      minDeliveryTime: 29,
+      maxDeliveryTime: 29,
+      slaString: "29 MINS",
+      lastMileTravel: 0.800000011920929,
+      slugs: {
+        restaurant: "deluxe-restaurant-bandra-kurla-complex-scruz-bandra-east",
+        city: "mumbai",
+      },
+      cityState: "5",
+      address:
+        "Mubeen Manzil, Near Peninsula Park, Lbs Marg, Bandra Kurla Complex, Mumbai",
+      locality: "Lbs Marg",
+      parentId: 70705,
+      unserviceable: false,
+      veg: false,
+      select: false,
+      favorite: false,
+      tradeCampaignHeaders: [],
+      chain: [],
+      feeDetails: {
+        fees: [
+          {
+            name: "distance",
+            fee: 3600,
+            message: "",
+          },
+          {
+            name: "time",
+            fee: 0,
+            message: "",
+          },
+          {
+            name: "special",
+            fee: 0,
+            message: "",
+          },
+        ],
+        totalFees: 3600,
+        message: "",
+        title: "Delivery Charge",
+        amount: "3600",
+        icon: "",
+      },
+      availability: {
+        opened: true,
+        nextOpenMessage: "",
+        nextCloseMessage: "",
+      },
+      longDistanceEnabled: 0,
+      rainMode: "NONE",
+      thirdPartyAddress: false,
+      thirdPartyVendor: "",
+      adTrackingID: "",
+      badges: {
+        imageBased: [],
+        textBased: [],
+        textExtendedBadges: [],
+      },
+      lastMileTravelString: "0.8 kms",
+      hasSurge: false,
+      aggregatedDiscountInfoV3: {
+        header: "20% OFF",
+        subHeader: "UPTO ₹50",
+        discountTag: "",
+        headerTypeV2: 0,
+      },
+      sla: {
+        restaurantId: "19344",
+        deliveryTime: 29,
+        minDeliveryTime: 29,
+        maxDeliveryTime: 29,
+        lastMileTravel: 0.800000011920929,
+        lastMileDistance: 0,
+        serviceability: "SERVICEABLE",
+        rainMode: "NONE",
+        longDistance: "NOT_LONG_DISTANCE",
+        preferentialService: false,
+        iconType: "EMPTY",
+      },
+      promoted: false,
+      avgRating: "4.2",
+      totalRatings: 10000,
+      new: false,
+    },
+    subtype: "basic",
+  },
+  {
+    type: "restaurant",
+    data: {
+      type: "F",
+      id: "32399",
+      name: "McDonald's",
+      uuid: "50a56a02-357f-4041-a250-478dc74a7868",
+      city: "5",
+      area: "Santacruz East",
+      totalRatingsString: "10000+ ratings",
+      cloudinaryImageId: "ee5f8e06b300efc07c9fe3f4df40dfc4",
+      cuisines: ["Burgers", "Beverages", "Cafe", "Desserts"],
+      tags: [],
+      costForTwo: 40000,
+      costForTwoString: "₹400 FOR TWO",
+      deliveryTime: 29,
+      minDeliveryTime: 29,
+      maxDeliveryTime: 29,
+      slaString: "29 MINS",
+      lastMileTravel: 1.2000000476837158,
+      slugs: {
+        restaurant: "mcdonalds-kalina-artista-scruz-bandra-east",
+        city: "mumbai",
+      },
+      cityState: "5",
+      address:
+        "Hardcastle Restaurants Pvt Ltd, McDonalds Family Restaurants Pvt Ltd, Sumit Artista, G-28, Vidya Nagari Rd, Mathuradas Colony, Kalina, Santacruz East, Mumbai, Maharashtra 400098.",
+      locality: "Kalina Artista",
+      parentId: 630,
+      unserviceable: false,
+      veg: false,
+      select: false,
+      favorite: false,
+      tradeCampaignHeaders: [],
+      chain: [],
+      feeDetails: {
+        fees: [
+          {
+            name: "distance",
+            fee: 3600,
+            message: "",
+          },
+          {
+            name: "time",
+            fee: 0,
+            message: "",
+          },
+          {
+            name: "special",
+            fee: 0,
+            message: "",
+          },
+        ],
+        totalFees: 3600,
+        message: "",
+        title: "Delivery Charge",
+        amount: "3600",
+        icon: "",
+      },
+      availability: {
+        opened: true,
+        nextOpenMessage: "",
+        nextCloseMessage: "",
+      },
+      longDistanceEnabled: 0,
+      rainMode: "NONE",
+      thirdPartyAddress: false,
+      thirdPartyVendor: "",
+      adTrackingID: "",
+      badges: {
+        imageBased: [],
+        textBased: [],
+        textExtendedBadges: [],
+      },
+      lastMileTravelString: "1.2 kms",
+      hasSurge: false,
+      aggregatedDiscountInfoV3: {
+        header: "10% OFF",
+        subHeader: "ABOVE ₹999",
+        discountTag: "FLAT DEAL",
+        headerTypeV2: 0,
+      },
+      sla: {
+        restaurantId: "32399",
+        deliveryTime: 29,
+        minDeliveryTime: 29,
+        maxDeliveryTime: 29,
+        lastMileTravel: 1.2000000476837158,
+        lastMileDistance: 0,
+        serviceability: "SERVICEABLE",
+        rainMode: "NONE",
+        longDistance: "NOT_LONG_DISTANCE",
+        preferentialService: false,
+        iconType: "EMPTY",
+      },
+      promoted: false,
+      avgRating: "4.2",
+      totalRatings: 10000,
+      new: false,
+    },
+    subtype: "basic",
+  },
+  {
+    type: "restaurant",
+    data: {
+      type: "F",
+      id: "543837",
+      name: "Louis Burger",
+      uuid: "5db3cdd2-979c-4ac1-b4f0-af80b97abdc7",
+      city: "5",
+      area: "Santa Cruz West",
+      totalRatingsString: "500+ ratings",
+      cloudinaryImageId: "19d3d352cc815b9d88b22617b41fa97b",
+      cuisines: ["Burgers", "Fast Food", "Beverages"],
+      tags: [],
+      costForTwo: 60000,
+      costForTwoString: "₹600 FOR TWO",
+      deliveryTime: 39,
+      minDeliveryTime: 39,
+      maxDeliveryTime: 39,
+      slaString: "39 MINS",
+      lastMileTravel: 6.900000095367432,
+      slugs: {
+        restaurant: "louis-burger-santa-cruz-west-bandra-west",
+        city: "mumbai",
+      },
+      cityState: "5",
+      address:
+        "Shop Number 8 AHIYA CHSL, Junction of Main Avenue Road and 16th Road Santa Cruz West, Greater Mumbai Ward-H/W, Greater Mumbai, , Maharashtra, 400054",
+      locality: "Junction of Main Avenue Road",
+      parentId: 22485,
+      unserviceable: false,
+      veg: false,
+      select: false,
+      favorite: false,
+      tradeCampaignHeaders: [],
+      ribbon: [
+        {
+          type: "PROMOTED",
+        },
+      ],
+      chain: [],
+      feeDetails: {
+        fees: [
+          {
+            name: "distance",
+            fee: 6900,
+            message: "",
+          },
+          {
+            name: "time",
+            fee: 0,
+            message: "",
+          },
+          {
+            name: "special",
+            fee: 0,
+            message: "",
+          },
+        ],
+        totalFees: 6900,
+        message: "",
+        title: "Delivery Charge",
+        amount: "6900",
+        icon: "",
+      },
+      availability: {
+        opened: true,
+        nextOpenMessage: "",
+        nextCloseMessage: "",
+      },
+      longDistanceEnabled: 0,
+      rainMode: "NONE",
+      thirdPartyAddress: false,
+      thirdPartyVendor: "",
+      adTrackingID:
+        "cid=7251071~p=10~eid=00000189-4b15-08f5-01c1-64ca00e10a44~srvts=1689181817077",
+      badges: {
+        imageBased: [],
+        textBased: [],
+        textExtendedBadges: [],
+      },
+      lastMileTravelString: "6.9 kms",
+      hasSurge: false,
+      aggregatedDiscountInfoV3: {
+        header: "20% OFF",
+        subHeader: "UPTO ₹50",
+        discountTag: "",
+        headerTypeV2: 0,
+      },
+      sla: {
+        restaurantId: "543837",
+        deliveryTime: 39,
+        minDeliveryTime: 39,
+        maxDeliveryTime: 39,
+        lastMileTravel: 6.900000095367432,
+        lastMileDistance: 0,
+        serviceability: "SERVICEABLE",
+        rainMode: "NONE",
+        longDistance: "NOT_LONG_DISTANCE",
+        preferentialService: false,
+        iconType: "EMPTY",
+      },
+      promoted: true,
+      avgRating: "4.3",
+      totalRatings: 500,
+      new: false,
+    },
+    subtype: "basic",
+  },
+  {
+    type: "restaurant",
+    data: {
+      type: "F",
+      id: "48030",
+      name: "Sahara Hotel - Kurla",
+      uuid: "4ffa188b-b74e-4b62-b141-de7a145f8efe",
+      city: "5",
+      area: "Kurla",
+      totalRatingsString: "1000+ ratings",
+      cloudinaryImageId: "qhd1a0qhl4iuaiwpf5rs",
+      cuisines: ["North Indian", "Chinese", "Mughlai", "Beverages"],
+      tags: [],
+      costForTwo: 65000,
+      costForTwoString: "₹650 FOR TWO",
+      deliveryTime: 23,
+      minDeliveryTime: 23,
+      maxDeliveryTime: 23,
+      slaString: "23 MINS",
+      lastMileTravel: 0.699999988079071,
+      slugs: {
+        restaurant: "sahara-hotel-kurla-kurla",
+        city: "mumbai",
+      },
+      cityState: "5",
+      address: "Near Kalpana Cinema, LBS Marg, Kurla West, Kurla, Mumbai",
+      locality: "Near Kalpana Cinema",
+      parentId: 174631,
+      unserviceable: false,
+      veg: false,
+      select: false,
+      favorite: false,
+      tradeCampaignHeaders: [],
+      chain: [],
+      feeDetails: {
+        fees: [
+          {
+            name: "distance",
+            fee: 3600,
+            message: "",
+          },
+          {
+            name: "time",
+            fee: 0,
+            message: "",
+          },
+          {
+            name: "special",
+            fee: 0,
+            message: "",
+          },
+        ],
+        totalFees: 3600,
+        message: "",
+        title: "Delivery Charge",
+        amount: "3600",
+        icon: "",
+      },
+      availability: {
+        opened: true,
+        nextOpenMessage: "",
+        nextCloseMessage: "",
+      },
+      longDistanceEnabled: 0,
+      rainMode: "NONE",
+      thirdPartyAddress: false,
+      thirdPartyVendor: "",
+      adTrackingID: "",
+      badges: {
+        imageBased: [],
+        textBased: [],
+        textExtendedBadges: [],
+      },
+      lastMileTravelString: "0.6 kms",
+      hasSurge: false,
+      sla: {
+        restaurantId: "48030",
+        deliveryTime: 23,
+        minDeliveryTime: 23,
+        maxDeliveryTime: 23,
+        lastMileTravel: 0.699999988079071,
+        lastMileDistance: 0,
+        serviceability: "SERVICEABLE",
+        rainMode: "NONE",
+        longDistance: "NOT_LONG_DISTANCE",
+        preferentialService: false,
+        iconType: "EMPTY",
+      },
+      promoted: false,
+      avgRating: "4.1",
+      totalRatings: 1000,
+      new: false,
+    },
+    subtype: "basic",
+  },
+  {
+    type: "restaurant",
+    data: {
+      type: "F",
+      id: "153348",
+      name: "Nawab Seekh Corner",
+      uuid: "f1385485-35be-485a-8b97-b7a76f1e46f6",
+      city: "5",
+      area: "Mumbai",
+      totalRatingsString: "1000+ ratings",
+      cloudinaryImageId: "ssbxpgkn1fmjljx8p2k4",
+      cuisines: ["North Indian"],
+      tags: [],
+      costForTwo: 55000,
+      costForTwoString: "₹550 FOR TWO",
+      deliveryTime: 55,
+      minDeliveryTime: 55,
+      maxDeliveryTime: 55,
+      slaString: "55 MINS",
+      lastMileTravel: 0.6000000238418579,
+      slugs: {
+        restaurant: "nawab-seekh-corner-kurla-kurla",
+        city: "mumbai",
+      },
+      cityState: "5",
+      address:
+        "Nawab Seekh Corner, Near Delhi Zaika and Kalpana Cinema, LBS Marg, Kurla West, Kurla, Mumbai",
+      locality: "Kurla",
+      parentId: 144982,
+      unserviceable: false,
+      veg: false,
+      select: false,
+      favorite: false,
+      tradeCampaignHeaders: [],
+      chain: [],
+      feeDetails: {
+        fees: [
+          {
+            name: "distance",
+            fee: 3600,
+            message: "",
+          },
+          {
+            name: "time",
+            fee: 0,
+            message: "",
+          },
+          {
+            name: "special",
+            fee: 0,
+            message: "",
+          },
+        ],
+        totalFees: 3600,
+        message: "",
+        title: "Delivery Charge",
+        amount: "3600",
+        icon: "",
+      },
+      availability: {
+        opened: true,
+        nextOpenMessage: "",
+        nextCloseMessage: "",
+      },
+      longDistanceEnabled: 0,
+      rainMode: "NONE",
+      thirdPartyAddress: false,
+      thirdPartyVendor: "",
+      adTrackingID: "",
+      badges: {
+        imageBased: [],
+        textBased: [],
+        textExtendedBadges: [],
+      },
+      lastMileTravelString: "0.6 kms",
+      hasSurge: false,
+      sla: {
+        restaurantId: "153348",
+        deliveryTime: 55,
+        minDeliveryTime: 55,
+        maxDeliveryTime: 55,
+        lastMileTravel: 0.6000000238418579,
+        lastMileDistance: 0,
+        serviceability: "SERVICEABLE",
+        rainMode: "NONE",
+        longDistance: "NOT_LONG_DISTANCE",
+        preferentialService: false,
+        iconType: "EMPTY",
+      },
+      promoted: false,
+      avgRating: "4.1",
+      totalRatings: 1000,
+      new: false,
+    },
+    subtype: "basic",
+  },
+  {
+    type: "restaurant",
+    data: {
+      type: "F",
+      id: "393071",
+      name: "The Poke Co",
+      uuid: "5c550de3-d7e9-45ba-9923-e7070434002f",
+      city: "5",
+      area: "Bandra West",
+      totalRatingsString: "500+ ratings",
+      cloudinaryImageId: "zblcidgl9qe0smi666zr",
+      cuisines: ["Japanese"],
+      tags: [],
+      costForTwo: 80000,
+      costForTwoString: "₹800 FOR TWO",
+      deliveryTime: 43,
+      minDeliveryTime: 43,
+      maxDeliveryTime: 43,
+      slaString: "43 MINS",
+      lastMileTravel: 6.300000190734863,
+      slugs: {
+        restaurant: "the-poke-co.-bandra-west-bandra-west",
+        city: "mumbai",
+      },
+      cityState: "5",
+      address:
+        "M GALAXY CORP 105 COMET TURNER RD BANDRA WEST, Greater Mumbai Ward-H/E, Greater Mumbai, , Maharashtra, 400050",
+      locality: "COMET TURNER RD",
+      parentId: 257889,
+      unserviceable: false,
+      veg: false,
+      select: false,
+      favorite: false,
+      tradeCampaignHeaders: [],
+      ribbon: [
+        {
+          type: "PROMOTED",
+        },
+      ],
+      chain: [],
+      feeDetails: {
+        fees: [
+          {
+            name: "distance",
+            fee: 6900,
+            message: "",
+          },
+          {
+            name: "time",
+            fee: 0,
+            message: "",
+          },
+          {
+            name: "special",
+            fee: 0,
+            message: "",
+          },
+        ],
+        totalFees: 6900,
+        message: "",
+        title: "Delivery Charge",
+        amount: "6900",
+        icon: "",
+      },
+      availability: {
+        opened: true,
+        nextOpenMessage: "",
+        nextCloseMessage: "",
+      },
+      longDistanceEnabled: 0,
+      rainMode: "NONE",
+      thirdPartyAddress: false,
+      thirdPartyVendor: "",
+      adTrackingID:
+        "cid=7409970~p=13~eid=00000189-4b15-08f5-01c1-64cb00e10d50~srvts=1689181817077",
+      badges: {
+        imageBased: [],
+        textBased: [],
+        textExtendedBadges: [],
+      },
+      lastMileTravelString: "6.3 kms",
+      hasSurge: false,
+      sla: {
+        restaurantId: "393071",
+        deliveryTime: 43,
+        minDeliveryTime: 43,
+        maxDeliveryTime: 43,
+        lastMileTravel: 6.300000190734863,
+        lastMileDistance: 0,
+        serviceability: "SERVICEABLE",
+        rainMode: "NONE",
+        longDistance: "NOT_LONG_DISTANCE",
+        preferentialService: false,
+        iconType: "EMPTY",
+      },
+      promoted: true,
+      avgRating: "4.4",
+      totalRatings: 500,
+      new: false,
+    },
+    subtype: "basic",
+  },
+  {
+    type: "restaurant",
+    data: {
+      type: "F",
+      id: "358147",
+      name: "Meraki",
+      uuid: "534603b2-56ae-41c1-922c-725b4d33edb9",
+      city: "5",
+      area: "Kurla",
+      totalRatingsString: "5000+ ratings",
+      cloudinaryImageId: "wmmzbfzsvrxc38x9tvho",
+      cuisines: ["Chinese", "Burmese", "Thai", "Beverages", "Thalis"],
+      tags: [],
+      costForTwo: 50000,
+      costForTwoString: "₹500 FOR TWO",
+      deliveryTime: 28,
+      minDeliveryTime: 28,
+      maxDeliveryTime: 28,
+      slaString: "28 MINS",
+      lastMileTravel: 0.699999988079071,
+      slugs: {
+        restaurant: "meraki-scruz-bandra-east-scruz-bandra-east-2",
+        city: "mumbai",
+      },
+      cityState: "5",
+      address:
+        "Shop no. 10/11, kasam Chunawlaa Compound, Shastri Nagar, Kalina, Near Bimsillah Hotel, Santacruz East       400029",
+      locality: "Shastri Nagar",
+      parentId: 2356,
+      unserviceable: false,
+      veg: false,
+      select: false,
+      favorite: false,
+      tradeCampaignHeaders: [],
+      chain: [],
+      feeDetails: {
+        fees: [
+          {
+            name: "distance",
+            fee: 3600,
+            message: "",
+          },
+          {
+            name: "time",
+            fee: 0,
+            message: "",
+          },
+          {
+            name: "special",
+            fee: 0,
+            message: "",
+          },
+        ],
+        totalFees: 3600,
+        message: "",
+        title: "Delivery Charge",
+        amount: "3600",
+        icon: "",
+      },
+      availability: {
+        opened: true,
+        nextOpenMessage: "",
+        nextCloseMessage: "",
+      },
+      longDistanceEnabled: 0,
+      rainMode: "NONE",
+      thirdPartyAddress: false,
+      thirdPartyVendor: "",
+      adTrackingID: "",
+      badges: {
+        imageBased: [],
+        textBased: [],
+        textExtendedBadges: [],
+      },
+      lastMileTravelString: "0.6 kms",
+      hasSurge: false,
+      aggregatedDiscountInfoV3: {
+        header: "₹125 OFF",
+        subHeader: "ABOVE ₹599",
+        discountTag: "FLAT DEAL",
+        headerTypeV2: 0,
+      },
+      sla: {
+        restaurantId: "358147",
+        deliveryTime: 28,
+        minDeliveryTime: 28,
+        maxDeliveryTime: 28,
+        lastMileTravel: 0.699999988079071,
+        lastMileDistance: 0,
+        serviceability: "SERVICEABLE",
+        rainMode: "NONE",
+        longDistance: "NOT_LONG_DISTANCE",
+        preferentialService: false,
+        iconType: "EMPTY",
+      },
+      promoted: false,
+      avgRating: "4.2",
+      totalRatings: 5000,
+      new: false,
+    },
+    subtype: "basic",
+  },
+  {
+    type: "restaurant",
+    data: {
+      type: "F",
+      id: "372200",
+      name: "New Lajawaab Seekh Corner",
+      uuid: "d17d7cb9-a980-4515-b15d-3d75212457f8",
+      city: "5",
+      area: "Bhd Kurla Weight Bridge",
+      totalRatingsString: "1000+ ratings",
+      cloudinaryImageId: "wtjwh915fnytypbywvcs",
+      cuisines: ["Indian"],
+      tags: [],
+      costForTwo: 20000,
+      costForTwoString: "₹200 FOR TWO",
+      deliveryTime: 23,
+      minDeliveryTime: 23,
+      maxDeliveryTime: 23,
+      slaString: "23 MINS",
+      lastMileTravel: 0.699999988079071,
+      slugs: {
+        restaurant: "new-lajawaab-seekh-corner-kurla-kurla",
+        city: "mumbai",
+      },
+      cityState: "5",
+      address:
+        "GALA NO 1,2,3, BHD KURLA WEIGHT BRIDGE LBS ROAD KURLA WEST MUMBAI 400070",
+      locality: "Kurla",
+      parentId: 147071,
+      unserviceable: false,
+      veg: false,
+      select: false,
+      favorite: false,
+      tradeCampaignHeaders: [],
+      chain: [],
+      feeDetails: {
+        fees: [
+          {
+            name: "distance",
+            fee: 3600,
+            message: "",
+          },
+          {
+            name: "time",
+            fee: 0,
+            message: "",
+          },
+          {
+            name: "special",
+            fee: 0,
+            message: "",
+          },
+        ],
+        totalFees: 3600,
+        message: "",
+        title: "Delivery Charge",
+        amount: "3600",
+        icon: "",
+      },
+      availability: {
+        opened: true,
+        nextOpenMessage: "",
+        nextCloseMessage: "",
+      },
+      longDistanceEnabled: 0,
+      rainMode: "NONE",
+      thirdPartyAddress: false,
+      thirdPartyVendor: "",
+      adTrackingID: "",
+      badges: {
+        imageBased: [],
+        textBased: [],
+        textExtendedBadges: [],
+      },
+      lastMileTravelString: "0.6 kms",
+      hasSurge: false,
+      aggregatedDiscountInfoV3: {
+        header: "₹100 OFF",
+        subHeader: "ABOVE ₹599",
+        discountTag: "FLAT DEAL",
+        headerTypeV2: 0,
+      },
+      sla: {
+        restaurantId: "372200",
+        deliveryTime: 23,
+        minDeliveryTime: 23,
+        maxDeliveryTime: 23,
+        lastMileTravel: 0.699999988079071,
+        lastMileDistance: 0,
+        serviceability: "SERVICEABLE",
+        rainMode: "NONE",
+        longDistance: "NOT_LONG_DISTANCE",
+        preferentialService: false,
+        iconType: "EMPTY",
+      },
+      promoted: false,
+      avgRating: "4.0",
+      totalRatings: 1000,
+      new: false,
+    },
+    subtype: "basic",
+  },
+];
+const burgerKing = {
+  image:
+    "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/e33e1d3ba7d6b2bb0d45e1001b731fcf",
+  name: "Burger King",
+  cusines: ["Burger", "American"],
+  rating: "4.2",
+};
+const ResturantCard = ({ cloudinaryImageId, name, cuisines, avgRating }) => {
+  // console.log(props);
+  // const {  } = resturant.data;
+  return (
+    <div className="card">
+      <img
+        src={
+          "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/" +
+          cloudinaryImageId
+        }
+      />
+      <h2>{name}</h2>
+      <h3>{cuisines.join(", ")}</h3>
+      <h4>{avgRating} stars</h4>
     </div>
-    <div class="userWrapper">
-      <span className="userIcon">user</span>
+  );
+};
+const Body = () => {
+  return (
+    <div className="resturant-list">
+      {resturantList.map((resturant) => {
+        return <ResturantCard {...resturant.data} key={resturant.data.id} />;
+      })}
     </div>
-  </header>
-)
+  );
+};
+
+const Footer = () => {
+  return <h4>Footer</h4>;
+};
+
+const AppLayout = () => {
+  return (
+    <>
+      <Header />
+      <Body />
+      <Footer />
+    </>
+  );
+};
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<HeaderComponent />);
+root.render(<AppLayout />);

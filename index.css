@@ -1,4 +1,4 @@
-* {
+/* * {
   margin: 0px;
   padding: 0;
   box-sizing: border-box;
@@ -35,4 +35,40 @@ header {
 
 .searchWrapper input:focus {
   outline: none;
+} */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  border: 1px solid black;
+  align-items: center;
+}
+.nav-items > ul {
+  list-style: none;
+  display: flex;
+}
+
+.nav-items > ul > li {
+  padding: 10px;
+}
+
+.logo {
+  width: 75px;
+}
+
+.card {
+  width: 200px;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+}
+
+.card > img {
+  width: 100%;
+}
+
+.resturant-list {
+  display: flex;
+  flex-wrap: wrap;
 }
